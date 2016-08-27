@@ -1,0 +1,63 @@
+.container
+	max-width: $desktop-screen
+	margin: 0 auto
+	background: gray
+@include cols(all)
+.container-fluid
+	width: 100%
+	margin: 0 auto
+	background: gray
+.container
+	.row
+		margin-left: ($grid-gutter-width / 2)
+		margin-right: ($grid-gutter-width / 2)
+@media #{$desktop-media}
+	.container
+		width: 95%
+		background: purple
+	@include cols(all)
+// Laptop 1366px
+@media #{$laptop-media}
+	.container
+		background: green
+		width: 95%
+	@include cols(lg)	
+// Tablet Landscape 1024px
+@media #{$tablet-land-media}
+	.container
+		background: red
+		width: 100%
+	@include cols(md)	
+// Tablet 768px
+@media #{$tablet-media}
+	.container
+		background: blue
+		width: 100%
+	@include cols(sm)	
+/* Phone 586px */
+@media #{$phone-media}
+	.container
+		background: yellow
+		width: 100%
+	@include cols(xs)
+.row
+	margin-left: auto
+	margin-right: auto
+::after
+	content: ""
+	display: table
+	clear: both
+.section
+	padding-top: 1rem
+	padding-bottom: 1rem
+/* Columns */
+.col
+	float: left
+	box-sizing: border-box
+	padding: 0 $grid-gutter-width / 2
+	min-height: 1px
+	position: relative
+.col
+	[class*="push-"],
+	[class*="pull-"] 
+		position: relative
