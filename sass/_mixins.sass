@@ -1,13 +1,10 @@
-/* Colums Mixin*/
+/* Columns Mixins*/
 @mixin cols($name)
 	$i: 1
 	@while $i <= $grid-columns
 		$width-col: 		unquote((100 / ($grid-columns / $i)) + "%")
 		.#{$name}-#{$i}
 			width: 			$width-col
-			margin-left: 	auto
-			left: 			auto
-			right: 			auto
 		.offset-#{$name}-#{$i}
 			margin-left: 	$width-col
 		.pull-#{$name}-#{$i}
