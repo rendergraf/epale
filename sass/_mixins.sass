@@ -12,3 +12,27 @@
 		.push-#{$name}-#{$i}
 			left: 			$width-col !important
 		$i: $i + 1
+
+/* Video */
+@mixin ratio ($w,$h)
+	height: 0
+	overflow: hidden
+	width: 100%
+	padding-bottom: percentage($h / $w)
+
+/* Functions em and rem */
+@function em($pixels,$parent:16px)
+	@return ($pixels / $parent) * 1em
+@function rem($pixels,$parent:16px)
+	@return ($pixels / $parent) * 1rem
+/* Shadows */
+/* Normal 2px*/
+@mixin shadow-normal($color, $opacity)
+	-webkit-box-shadow: 0px 2px 5px 0px rgba($color, $opacity), 0px -2px 5px 0px rgba($color, $opacity/2)
+	-moz-box-shadow: 0px 2px 5px 0px rgba($color, $opacity), 0px -2px 5px 0px rgba($color, $opacity/2)
+	box-shadow: 0px 2px 5px 0px rgba($color, $opacity), 0px -2px 5px 0px rgba($color, $opacity/2)
+/* Hover 8px*/
+@mixin shadow-hover($color, $opacity)
+	-webkit-box-shadow: 0px 8px 24px -4px rgba($color, $opacity), 0px -2px 12px -4px rgba($color, $opacity)
+	-moz-box-shadow: 0px 8px 24px -4px rgba($color, $opacity), 0px -2px 12px -4px rgba($color, $opacity)
+	box-shadow: 0px 8px 24px -4px rgba($color, $opacity), 0px -2px 12px -4px rgba($color, $opacity)

@@ -1,0 +1,29 @@
+/*Text for cards*/
+.supporting-text-card
+	padding: 16px 16px 24px 16px
+	p
+		margin: 0
+/* Padding Mobile */
+@media #{$phone-media}
+	.supporting-text-card
+		padding: 16px
+	.primary-title-card
+		padding: 16px
+/* Title for cards*/
+.primary-title-card
+	line-height: 24px
+	padding: 24px 16px 0px 16px
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		margin: 0
+		font-weight: 500
+.primary-title-card
+	h4
+		color: $secondary-text-color
+		font-weight: 400
+.primary-title-card + .actions-card
+	margin-top: 16px
