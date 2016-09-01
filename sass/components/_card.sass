@@ -1,9 +1,10 @@
 .card
 	background-color: transparent
-	min-height: 400px
+	/* min-height: 400px */
 	display: flex
 	flex-wrap: wrap
 	border-radius: rem(2px)
+	overflow: hidden
 	transition: all .3s ease-out
 	@include shadow-normal($primary-text-color, 0.3)
 	@media #{$phone-media}
@@ -30,7 +31,7 @@
 	background-color: white
 	width: 100%
 	align-self: flex-end
-	min-height: 100px
+	/* min-height: 100px */
 	border-radius: 0 0 rem(2px) rem(2px)
 .media-area-card
 	background-color: $primary-color
@@ -41,8 +42,11 @@
 		position: absolute
 		bottom: 0
 		left: 0
+		width: 100%
 		h2,h4
 			color: white
+.area-card-shadow
+	@include shadow-area-card($primary-text-color, 0.3)
 .actions-card
 	margin: 0
 	padding: 0

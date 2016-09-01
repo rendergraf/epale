@@ -13,8 +13,27 @@ html
 	background-color: rgba(255,255,255,0)
 .btn-flat:hover
 	background-color: mix(white, $primary-text-color, 88%)
+.btn-flat:active
+	background-color: mix(white, $primary-text-color, 81.5%)
 .waves-light
 	background-color: $accent-color
 	color: white
 .waves-light:hover
-	background-color: mix(white, $accent-color, 15%)
+	/* background-color: mix(white, $accent-color, 15%) */
+	background-color: mix($black, $accent-color, 12%)
+.waves-light:active
+	/* background-color: adjust-color(mix(black, $accent-color, 5.5%), $blue: -1, $green: -6, $red: -1) */
+	background: mix($black, $accent-color, 15%)
+	/* 2196F3 to 1976D2*/
+.btn-disabled
+	opacity: 0.6
+	cursor: not-allowed !important
+.btn-raised.btn-disabled:hover
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important
+.btn-flat.btn-disabled:hover
+	background-color: rgba(255,255,255,0)
+.waves-light.btn-disabled:active, .waves-light.btn-disabled:hover
+	background-color: $accent-color
+/* Colors for Cards */
+.secondary-bg-color
+	background: $secondary-text-color
