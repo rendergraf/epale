@@ -6,7 +6,7 @@
 	border-radius: rem(2px)
 	overflow: hidden
 	transition: all .3s ease-out
-	@include shadow-normal($primary-text-color, 0.3)
+	@include shadow-normal($primary-text-color, 0.2)
 	@media #{$phone-media}
 		margin-bottom: 8px
 .card-raised:hover
@@ -46,10 +46,10 @@
 		h2,h4
 			color: white
 .area-card-shadow
-	@include shadow-area-card($primary-text-color, 0.3)
+	@include shadow-area-card(black, 0.2)
 .actions-card
 	margin: 0
 	padding: 0
 	border-radius: 0 0 rem(2px) rem(2px)
 .divider-top-100
-	box-shadow: 0 -1px 0 0 mix(white, $primary-text-color, 88%)
+	box-shadow: 0 -1px 0 0 $separator-color

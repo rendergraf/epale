@@ -28,15 +28,19 @@
 /* Shadows */
 /* Normal 2px*/
 @mixin shadow-normal($color, $opacity)
-	-webkit-box-shadow: 0px 2px 5px 0px rgba($color, $opacity), 0px -2px 5px 0px rgba($color, $opacity/2)
-	-moz-box-shadow: 0px 2px 5px 0px rgba($color, $opacity), 0px -2px 5px 0px rgba($color, $opacity/2)
-	box-shadow: 0px 2px 5px 0px rgba($color, $opacity), 0px -2px 5px 0px rgba($color, $opacity/2)
+	-webkit-box-shadow: 0px 2px 4px 0px rgba($color, $opacity), 0 -1px 0px rgba($color,.02)
+	-moz-box-shadow: 0px 2px 4px 0px rgba($color, $opacity), 0 -1px 0px rgba($color,0.02)
+	box-shadow: 0px 2px 4px 0px rgba($color, $opacity), 0 -1px 0px rgba($color,0.02)
 /* Hover 8px*/
 @mixin shadow-hover($color, $opacity)
 	-webkit-box-shadow: 0px 8px 24px -4px rgba($color, $opacity), 0px -2px 12px -4px rgba($color, $opacity)
 	-moz-box-shadow: 0px 8px 24px -4px rgba($color, $opacity), 0px -2px 12px -4px rgba($color, $opacity)
 	box-shadow: 0px 8px 24px -4px rgba($color, $opacity), 0px -2px 12px -4px rgba($color, $opacity)
 @mixin shadow-area-card($color, $opacity)
-	-webkit-box-shadow: 0px 5px 6px 0px rgba($color, $opacity)
-	-moz-box-shadow: 0px 5px 6px 0px rgba($color, $opacity)
-	box-shadow: 0px 5px 6px 0px rgba($color, $opacity)
+	-webkit-box-shadow: 0px 2px 4px 0px rgba($color, $opacity)
+	-moz-box-shadow: 0px 2px 4px 0px rgba($color, $opacity)
+	box-shadow: 0px 2px 4px 0px rgba($color, $opacity)
+
+@mixin shadow-btn-float($color, $opacity)
+	-webkit-box-shadow: 0 6px 10px 0 rgba($color,$opacity)
+	box-shadow: 0 6px 10px 0 rgba($color,$opacity)

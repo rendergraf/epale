@@ -29,3 +29,26 @@ button:focus
 	padding: rem(11px) rem(16px)
 .btn + .btn
 	margin-left: rem(0px)
+.btn-area-float
+	height: 1px
+	position: relative
+	width: 100%
+.btn-float
+	position: absolute
+	top: -28px
+	right: 14px
+	max-width: 56px
+	border-radius: 50%
+	background-color: $accent-color
+	@include shadow-btn-float(black, 0.3)
+	i.material-icons
+		font-size: 24px
+		margin: 16px
+		color: white
+.btn-area-float + .body-card .supporting-text-card
+	padding: 48px 16px 24px 16px
+.btn-area-float + .body-card .primary-title-card + .supporting-text-card,
+.btn-area-float + .body-card .primary-title-card + .actions-card + .supporting-text-card
+	padding: 16px 16px 24px 16px
+
+	
